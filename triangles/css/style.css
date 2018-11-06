@@ -1,0 +1,250 @@
+html, body {
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+	position: relative;
+	height: 300px;
+	width: 100%;
+
+	background-color: black;
+	overflow: hidden;
+}
+
+.title {
+	color: white;
+	position: absolute;
+	left: 90px;
+	top: 50px;
+}
+
+.title h1 {
+	font-size: 3.3rem;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+
+.motto {
+	/* border: 1px solid darkblue; */
+	font-size: 1.3rem;
+	text-align: center;
+	color: rgb(209, 230, 250);
+	position: absolute;
+	top: 60px;
+	left: 750px;
+	width: 170px;
+	animation: motto 14s infinite;
+	animation-direction: alternate;
+	/* transform: translateY(-200px); */
+	opacity: 0;
+}
+
+@keyframes motto {
+	60% {
+		/* transform: translateY(-200px); */
+		opacity: 0
+	}
+
+	100% {
+		/* transform: translateY(0); */
+		opacity: 1;
+	}
+}
+
+.triangle {
+	/* border: 1px solid blue; */
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	background-size: cover;
+	opacity: 1.0;
+}
+
+.t1 {
+	
+	top: 200px;
+	left: 500px;
+	background-image: url('../img/tred.png');
+	transform-origin: 100px 100px; 
+	animation: t1 14s infinite;
+	animation-direction: alternate;
+	
+}
+
+@keyframes t1 {
+
+	0% {
+		transform: rotate(0deg)
+	}
+
+  25% {
+		transform: rotate(0deg)
+	}
+	
+	75% {
+    transform: rotate(90deg)
+	}
+	
+	100% {
+    transform: rotate(90deg)
+  }
+}
+
+.t2 {
+	top: 100px;
+	left: 600px;
+	background-image: url('../img/tpurple.png');
+	transform-origin: 100px 100px; 
+	animation: t2 14s infinite;
+	animation-direction: alternate;
+}
+
+@keyframes t2 {
+
+	0% {
+		transform: rotate(-180deg)
+	}
+	25% {
+		transform: rotate(-180deg)
+	}
+
+  75% {
+    transform: rotate(-90deg);
+  }
+	
+	100% {
+    transform: rotate(-90deg);
+  }
+}
+
+.t3 {
+	top: 100px;
+	left: 600px;
+	background-image: url('../img/tblue.png');
+	transform-origin: 100px 0px; 
+	animation: t3 14s infinite;
+	animation-direction: alternate;
+}
+
+@keyframes t3 {
+
+	0% {
+		transform: rotate(0deg)
+	}
+
+	25% {
+		transform: rotate(0deg)
+	}
+
+  75% {
+    transform: rotate(90deg)
+  }
+	
+	100% {
+    transform: rotate(90deg)
+  }
+}
+
+.t4 {
+	top: 0px;
+	left: 500px;
+	background-image: url('../img/tgreen.png');
+	transform-origin: 200px 100px; 
+	animation: t4 14s infinite;
+	animation-direction: alternate;
+	transform: rotate(180deg)
+}
+
+@keyframes t4 {
+
+	0% {
+		transform: rotate(180deg)
+	}
+
+	25% {
+		transform: rotate(180deg)
+	}
+
+  75% {
+		/* top: -200px; */
+    transform: rotate(270deg) translateX(200px);
+  }
+	
+	100% {
+    transform: rotate(270deg) translateX(200px);
+  }
+}
+
+.t5 {
+	top: 0px;
+	left: 700px;
+	background-image: url('../img/torange.png');
+	transform-origin: 100px 0px; 
+	animation: t5 14s infinite;
+	animation-direction: alternate;
+	/* transform: rotate(180deg) */
+}
+
+@keyframes t5 {
+
+	0% {
+		transform: rotate(0deg);
+		opacity: 1.0;
+	}
+
+	25% {
+		transform: rotate(0deg);
+		opacity: 1.0;
+	}
+
+  75% {
+		/* top: -200px; */
+		transform: rotate(-90deg) translateX(-100px);
+		opacity: 0.0;
+  }
+	
+	100% {
+		transform: rotate(-90deg) translateX(-100px);
+		opacity: 0.0;
+  }
+}
+
+.t6 {
+	top: 100px;
+	left: 800px;
+	background-image: url('../img/tpink.png');
+	transform-origin: 100px 0px; 
+	animation: t6 14s infinite;
+	animation-direction: alternate;
+	transform: rotate(180deg)
+}
+
+@keyframes t6 {
+
+	0% {
+		transform: rotate(180deg);
+		opacity: 1.0;
+	}
+
+	25% {
+		transform: rotate(180deg);
+		opacity: 1.0;
+	}
+
+  75% {
+		/* top: -200px; */
+		transform: rotate(90deg) translateY(-100px);
+		opacity: 0.0;
+	}
+	
+	
+	100% {
+		transform: rotate(90deg) translateY(-100px);
+		opacity: 0.0;
+  }
+}

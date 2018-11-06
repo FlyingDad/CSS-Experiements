@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="100px" viewBox="0 0 400 195" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="11.9208984%" y1="111.909544%" x2="43.4052734%" y2="16.8922719%" id="linearGradient-1">
+            <stop stop-color="#9F0000" stop-opacity="0.805705642" offset="0%"></stop>
+            <stop stop-color="#590101" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1040.000000, -194.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" transform="translate(0.000000, -10.000000)">
+                <polygon id="Triangle-Copy-2" points="1040 399 1240 204.5 1440 399"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

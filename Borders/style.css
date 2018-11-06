@@ -1,0 +1,51 @@
+/* https://9elements.github.io/fancy-border-radius/full-control.html#70.77.20.19-80.70.30.30-. */
+
+body, html {
+	color: red;
+	background: rgb(22, 0, 51);
+}
+
+#box {
+	width: 50vmin;
+	height: 50vmin;
+	border: 2px solid blue;
+}
+
+.generator {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(-225deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 40%, rgba(0, 255, 255, 0) 60%, #0ff 100%), linear-gradient(45deg, #3023AE 0%, #FF0099 100%);
+	border-radius:  20% 20% 20% 20% / 20% 20% 20% 20%;
+	animation: mutate 2s infinite;
+}
+
+@keyframes mutate {
+	0% {border-radius:  20% 20% 20% 20% / 20% 20% 20% 20%;}
+	17% {border-radius:  40% 23% 35% 30% / 35% 25% 35% 25%;}
+	35% {border-radius:  60% 27% 50% 30% / 50% 25% 50% 25%;}
+	50% {border-radius:  80% 30% 70% 20% / 70% 20% 70% 20%;}
+	67% {border-radius:  60% 27% 50% 30% / 50% 25% 50% 25%;}
+	84% {border-radius:  40% 23% 35% 30% / 35% 25% 35% 25%;}
+	100% {border-radius:  20% 20% 20% 20% / 20% 20% 20% 20%;}
+}
+
+.generator::before {
+	content: "";
+	width: 20vmax;
+	height: 30vmax;
+	position: absolute;
+	background: rgba(197, 97, 243, 0.295);
+	top: 20vmin;
+	left: 30vmin;
+	animation: morph 25s linear infinite, spin 115s linear infinite;
+}
+
+@keyframes morph {
+	0% {border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;}
+	50% {border-radius: 40% 60%}
+	100% {border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;}
+}
+
+@keyframes spin {
+	to {transform: rotate(1turn);}
+}
