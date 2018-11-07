@@ -1,4 +1,4 @@
-html, body {
+body {
 	box-sizing: border-box;
 	position: relative;
 	margin: 0 auto;
@@ -11,12 +11,19 @@ html, body {
 	height: 300px;
 	width: 100%;
 
-	background-color: black;
+	/* background-color: black; */
 	overflow: hidden;
+
+	/* https://medium.marqeta.com/from-ordinary-to-extraordinary-with-css-animations-2aafd1bd9a6d */
+	background: linear-gradient(129deg, #1b003a, #13133d, #09005a, #29003b);
+  background-size: 800% 800%;
+	animation: GradientAnimation 28s infinite;
+	animation-direction: alternate;
+  position: relative;
 }
 
 .title {
-	color: white;
+	color: snow;
 	position: absolute;
 	left: 90px;
 	top: 50px;
@@ -24,6 +31,7 @@ html, body {
 
 .title h1 {
 	font-size: 3.3rem;
+	font-weight: 100;
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
@@ -40,18 +48,22 @@ html, body {
 	width: 170px;
 	animation: motto 14s infinite;
 	animation-direction: alternate;
-	/* transform: translateY(-200px); */
+	transform: rotateX(90deg) rotateY(45deg);
+	transform-origin: 50% 70%;
 	opacity: 0;
 }
 
 @keyframes motto {
+
+	/* from {transform: rotateX(90deg);}
+  to {transform: rotateX(0deg);} */
 	60% {
-		/* transform: translateY(-200px); */
+		transform: rotateX(90deg) rotateY(45deg);
 		opacity: 0
 	}
 
 	100% {
-		/* transform: translateY(0); */
+		transform: rotateX(0deg) rotateY(0deg);
 		opacity: 1;
 	}
 }
@@ -185,32 +197,23 @@ html, body {
 	left: 700px;
 	background-image: url('../img/torange.png');
 	transform-origin: 100px 0px; 
-	animation: t5 14s infinite;
+	animation: t5 14s infinite, fadeOut 14s infinite;
 	animation-direction: alternate;
-	/* transform: rotate(180deg) */
 }
 
 @keyframes t5 {
 
 	0% {
 		transform: rotate(0deg);
-		opacity: 1.0;
 	}
-
 	25% {
 		transform: rotate(0deg);
-		opacity: 1.0;
 	}
-
   75% {
-		/* top: -200px; */
 		transform: rotate(-90deg) translateX(-100px);
-		opacity: 0.0;
-  }
-	
+  }	
 	100% {
 		transform: rotate(-90deg) translateX(-100px);
-		opacity: 0.0;
   }
 }
 
@@ -219,7 +222,7 @@ html, body {
 	left: 800px;
 	background-image: url('../img/tpink.png');
 	transform-origin: 100px 0px; 
-	animation: t6 14s infinite;
+	animation: t6 14s infinite, fadeOut 14s infinite;
 	animation-direction: alternate;
 	transform: rotate(180deg)
 }
@@ -228,23 +231,41 @@ html, body {
 
 	0% {
 		transform: rotate(180deg);
-		opacity: 1.0;
 	}
-
 	25% {
 		transform: rotate(180deg);
-		opacity: 1.0;
 	}
-
   75% {
-		/* top: -200px; */
 		transform: rotate(90deg) translateY(-100px);
-		opacity: 0.0;
-	}
-	
-	
+	}	
 	100% {
 		transform: rotate(90deg) translateY(-100px);
-		opacity: 0.0;
+  }
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	25%{
+		opacity: 1.0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
   }
 }
